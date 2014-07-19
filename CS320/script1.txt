@@ -1,0 +1,229 @@
+Script started on Tue Apr 30 01:36:28 2013
+[1mrohan [0m[4m~/lisp[24m[89]% clisp
+  i i i i i i i      ooooo    o        ooooooo  ooooo  ooooo
+  I I I I I I I      8    8  8          8    8    o  8    8
+  I  \ `+' /  I      8        8          8    8        8    8
+  \  `-+-'  /      8        8          8      ooooo  8oooo
+    `-__|__-'        8        8          8          8  8
+        |            8    o  8          8    o    8  8
+  ------+------      ooooo    8oooooo  ooo8ooo  ooooo  8
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2006
+
+[1]> (fibo 0)[1]> (fibo 0)
+
+*** - EVAL: undefined function FIBO
+The following restarts are available:
+USE-VALUE      :R1      You may input a value to be used instead of (FDEFINITION 'FIBO).
+RETRY          :R2      Retry
+STORE-VALUE    :R3      You may input a new value for (FDEFINITION 'FIBO).
+ABORT          :R4      ABORT
+Break 1 [2]> (load      ABORT
+[3]> l (load "assin gn1.lsp")[3]> (load "assign1.lsp")
+;; Loading file assign1.lsp ...
+;; Loaded file assign1.lsp
+T
+[4]> (fio bo 0)[4]> (fibo 0)
+0
+[5]> 
+*** - Ctrl-C: User break
+The following restarts are available:
+ABORT          :R1      ABORT
+Break 1 [6]> ABORT
+[7]> (fibo 0)[7]> (fibo 0)
+0
+[8]> (fibo 1)[8]> (fibo 1)
+1
+[9]> (fibo 2)[9]> (fibo 2)
+1
+[10]> (fibo 3)[10]> (fibo 3)
+2
+[11]> (fibo 4)[11]> (fibo 4)
+3
+[12]> (fibo 5)[12]> (fibo 5)
+5
+[13]> (fino  bo 6)[13]> (fibo 6)
+8
+[14]> (fibo 6 7)[14]> (fibo 7)
+13
+[15]> (fibo 8)[15]> (fibo 8)
+21
+[16]> (fibo 9)[16]> (fibo 9)
+34
+[17]> (fibo 10)[17]> (fibo 10)
+55
+[18]> (time (fibo 25)(fibo 25))[18]> (time (fibo 25))
+Real time: 0.44851 sec.
+Run time: 0.44845 sec.
+Space: 0 Bytes
+75025
+[19]> (time (fibo 26)(fibo 26))[19]> (time (fibo 26))
+Real time: 0.727611 sec.
+Run time: 0.727559 sec.
+Space: 0 Bytes
+121393
+[20]> (time (fibo 27)(fibo 27))[20]> (time (fibo 27))
+Real time: 1.161093 sec.
+Run time: 1.161012 sec.
+Space: 0 Bytes
+196418
+[21]> (time (fibo 28)(fibo 28))[21]> (time (fibo 28))
+Real time: 1.936829 sec.
+Run time: 1.936693 sec.
+Space: 0 Bytes
+317811
+[22]> (time (t fibo 29)(fibo 29))[22]> (time (fibo 29))
+Real time: 3.075241 sec.
+Run time: 3.075025 sec.
+Space: 0 Bytes
+514229
+[23]> (time (fibo 30)(fibo 30))[23]> (time (fibo 30))
+Real time: 4.963719 sec.
+Run time: 4.96337 sec.
+Space: 0 Bytes
+832040
+[24]> (time (fibo 31)(fibo 31))[24]> (time (fibo 31))
+Real time: 8.030907 sec.
+Run time: 8.030341 sec.
+Space: 0 Bytes
+1346269
+[25]> (time (fibo 32)(fibo 32))[25]> (time (fibo 32))
+Real time: 12.956319 sec.
+Run time: 12.955407 sec.
+Space: 0 Bytes
+2178309
+[26]> (time (fibo 33)(fibo 33))[26]> (time (fibo 33))
+Real time: 21.050426 sec.
+Run time: 21.048943 sec.
+Space: 0 Bytes
+3524578
+[27]> (time (fibo 34)(fibo 34))[27]> (time (fibo 34))
+Real time: 33.89234 sec.
+Run time: 33.88995 sec.
+Space: 0 Bytes
+5702887
+[28]> (time (fibo 35)(fibo 35))[28]> (time (fibo 35))
+Real time: 54.858723 sec.
+Run time: 54.854744 sec.
+Space: 0 Bytes
+9227465
+[29]> (time (fibo (1 + 1 5)(+ 1 5))[29]> (time (fibo (+ 1 5)))[29]> (time (fibo (+ 1 5)))/(time (fibo 5)(fibo 5))(time (fibo 5))
+Real time: 8.5E-5 sec.
+Run time: 8.5E-5 sec.
+Space: 0 Bytes
+8
+[30]> 
+(8)
+[31]> 
+Real time: 3.5E-5 sec.
+Run time: 3.5E-5 sec.
+Space: 0 Bytes
+5
+[32]> (time (fibo (+ 1 35)(+ 1 35))[32]> (time (fibo (+ 1 35)))[32]> (time (fibo (+ 1 35)))/(time (fibo 35)(fibo 35))(time (fibo 35))
+Real time: 88.969246 sec.
+Run time: 88.961105 sec.
+Space: 0 Bytes
+14930352
+[33]> 
+(14930352)
+[34]> (compile 'fibo)
+
+Real time: 54.86283 sec.
+Run time: 54.85776 sec.
+Space: 0 Bytes
+9227465
+[35]> (compile 'fibo)[35]> (compile 'fibo)[K[35]> (compile 'fibo)
+FIBO ;
+NIL ;
+NIL
+[36]> (time (fibo 30  25)(fibo 25))[36]> (time (fibo 25))
+Real time: 0.043604 sec.
+Run time: 0.043599 sec.
+Space: 0 Bytes
+75025
+[37]> (tie me (fibo 36)(fibo 36))[37]> (time (fibo 36))
+Real time: 8.717156 sec.
+Run time: 8.716542 sec.
+Space: 0 Bytes
+14930352
+[38]> (time (fibo 26)(fibo 26))[38]> (time (fibo 26))
+Real time: 0.070868 sec.
+Run time: 0.070864 sec.
+Space: 0 Bytes
+121393
+[39]> (time (fibo 27)(fibo 27))[39]> (time (fibo 27))
+Real time: 0.114626 sec.
+Run time: 0.114617 sec.
+Space: 0 Bytes
+196418
+[40]> (time (fibo 28)(fibo 28))[40]> (time (fibo 28))
+Real time: 0.18533 sec.
+Run time: 0.185316 sec.
+Space: 0 Bytes
+317811
+[41]> (time (fibo 29)(fibo 29))[41]> (time (fibo 29))
+Real time: 0.300356 sec.
+Run time: 0.300332 sec.
+Space: 0 Bytes
+514229
+[42]> (time (fibo 30)(fibo 30))[42]> (time (fibo 30))
+Real time: 0.484562 sec.
+Run time: 0.484526 sec.
+Space: 0 Bytes
+832040
+[43]> (time (fibo 31)(fibo 31))[43]> (time (fibo 31))
+Real time: 0.787182 sec.
+Run time: 0.787126 sec.
+Space: 0 Bytes
+1346269
+[44]> (time (fibo 32)(fibo 32))[44]> (time (fibo 32))
+Real time: 1.273697 sec.
+Run time: 1.273609 sec.
+Space: 0 Bytes
+2178309
+[45]> (time (fibo 33)(fibo 33))[45]> (time (fibo 33))
+Real time: 2.065919 sec.
+Run time: 2.065774 sec.
+Space: 0 Bytes
+3524578
+[46]> (time (fibo 34)(fibo 34))[46]> (time (fibo 34))
+Real time: 3.328879 sec.
+Run time: 3.328645 sec.
+Space: 0 Bytes
+5702887
+[47]> (time (fibo 35)(fibo 35))[47]> (time (fibo 35))
+Real time: 5.386822 sec.
+Run time: 5.386444 sec.
+Space: 0 Bytes
+9227465
+[48]> (is= -prime (8722              is p  -prime (list 8 7 2 2)(list 8 7 2 2))[48]> (is-prime (list 8 7 2 2))
+
+*** - <: (8 7 2 2) is not a real number
+The following restarts are available:
+USE-VALUE      :R1      You may input a value to be used instead.
+ABORT          :R2      ABORT
+Break 1 [49]> (mapcar (lambda(x)(x)    (x)(x) (is= -prime x)(is-prime x))Break 1 [49]> (mapcar (lambda (x) (is-prime x))(  (list 8 7 2 2)(list 8 7 2 2))Break 1 [49]> (mapcar (lambda (x) (is-prime x)) (list 8 7 2 2))
+(NIL T T T)
+Break 1 [49]> ( ABORT
+[50]> (mapcar (lamda (x)(x)      bda (x)(x) (is-prime X x)(is-prime x))[50]> (mapcar (lambda (x) (is-prime x)) (list 8 7 2 2)(list 8 7 2 2))[50]> (mapcar (lambda (x) (is-prime x)) (list 8 7 2 2))
+(NIL T T T)
+[51]> (is-prime 8)[51]> (is-prime 8)
+NIL
+[52]> (( is-prime 7)[52]> (is-prime 7)
+T
+[53]> (i next-satisfying #'is-prime 1000000000000)[53]> (next-satisfying #'is-prime 1000000000000)
+1000000000039
+[54]> (next-satisfying #'is-prime 1000000000039)[54]> (next-satisfying #'is-prime 1000000000039)
+1000000000061
+[55]> (bye)(bye)
+Bye.
+[1mrohan [0m[4m~/lisp[24m[90]% ^D
+Use "exit" to leave tcsh.
+[1mrohan [0m[4m~/lisp[24m[90]% exit
+exit
+
+script done on Tue Apr 30 01:59:33 2013

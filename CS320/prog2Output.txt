@@ -1,0 +1,154 @@
+;;OUTPUT for LISP Assignment 2
+
+;;CS32
+;;-------------------------------------------------------------------------;;
+
+
+[2]> (load "assign2.lsp")
+;; Loading file assign2.lsp ...
+;; Loaded file assign2.lsp
+T
+[3]> (is-excessive 18)
+T
+[4]> (is-excessive 12)
+T
+[5]> (dribble)
+
+
+[9]> (consecutive-list 1 30)
+(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30)
+[10]> (those-satisfying #'is-excessive *)
+(12 18 20 24 30)
+[11]> (length *)
+5
+[12]> ;;FIVE satisfy is-excessive out of range 1-30
+
+
+Break 1 [13]> (consecutive-list 8 50)
+(8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37
+38 39 40 41 42 43 44 45 46 47 48 49 50)
+Break 1 [13]> (those-satisfying #'is-excessive *)
+(12 18 20 24 30 36 40 42 48)
+Break 1 [13]> (length *)
+9
+Break 1 [13]> ;;NINE satisfy is-excessive out of range 8-50
+
+
+
+[15]> ;;CALIXTA PROBLEM
+
+(zero-run-experiment 40 10)
+(3 4 6 6 5 8 5 4 3 8)
+[16]> (sort * #'<)
+(3 3 4 4 5 5 6 6 8 8)
+[17]> (first *)
+3
+[18]> (last **)
+(8)
+[19]> ;; MIN = 3  MAX = 8
+
+(zero-run-experiment 50 10)
+(7 10 3 3 5 9 4 3 5 3)
+[20]> (sort * #'<)
+(3 3 3 3 4 5 5 7 9 10)
+[21]> (first *)
+3
+[22]> (last **)
+(10)
+[23]> ;; MIN = 3 MAX = 10
+
+(zero-run-experiment 60 10)
+(5 11 5 5 3 5 5 5 5 6)
+[24]> (avg *)
+11/2
+[25]> ;; The AVERAGE of above list
+
+(one-run-experiment 40 10)
+(5 9 4 3 5 5 6 5 5 4)
+[26]> ;;
+;;AVERAGE
+(avg *)
+51/10
+
+
+[31]> (one-run-experiment 40 10)
+(5 5 15 8 6 5 7 5 4 6)
+[32]> (avg *)
+33/5
+[33]> ;;AVERAGE of experiment list
+
+(sort ** #'<)
+(4 5 5 5 5 6 6 7 8 15)
+[34]> (first *)
+4
+[35]> (last **)
+(15)
+[36]> ;; MIN = 4  MAX = 15
+
+(one-run-experiment 60 10)
+(7 5 3 4 4 7 5 5 3 7)
+[37]> (avg *)
+5
+[38]> ;;AVERAGE above
+
+(sort ** #'<)
+(3 3 4 4 5 5 5 7 7 7)
+[39]> (first *)
+3
+[40]> (last **)
+(7)
+[41]> ;; MIN = 3 MAX = 7
+
+(dribble)
+
+
+[4]> (load "assign2.lsp")
+;; Loading file assign2.lsp ...
+;; Loaded file assign2.lsp
+T
+[5]> (zero-run-experiment 40 15)
+(3 4 6 6 5 8 5 4 3 8 7 3 10 3 3)
+[6]> (avg *)
+26/5
+[7]> (sort ** #'<)
+(3 3 3 3 3 4 4 5 5 6 6 7 8 8 10)
+[8]> (first *)
+3
+[9]> (last **)
+(10)
+
+
+[12]> (zero-run-experiment 40 15)
+(6 4 2 3 4 7 4 6 4 6 4 5 5 5 4)
+[13]> (avg *)
+23/5
+
+[16]> (zero-run-experiment 40 15)
+(4 3 3 8 5 5 6 4 4 7 6 4 4 3 4)
+[17]> (avg *)
+14/3
+[18]> (standard-deviation **)
+1.4452988925785866d0
+[19]> (sort *** #'<)
+(3 3 3 4 4 4 4 4 4 5 5 6 6 7 8)
+[20]> (first *)
+3
+[21]> (last **)
+(8)
+[22]> ;; AVG = 14/3, StDEV = 1.445..., MIN = 3, MAX = 8
+
+(one-run-experiment 40 15)
+(5 4 4 5 15 8 6 3 10 3 4 4 6 7 5)
+[23]> (avg *)
+89/15
+[24]> (standard-deviation **)
+3.043389922803554d0
+[25]> (sort *** #'<)
+(3 3 4 4 4 4 5 5 5 6 6 7 8 10 15)
+[26]> (first *)
+3
+[27]> (last **)
+(15)
+[28]> ;; AVG = 89/15, StDEV = 3.043..., MIN = 3, MAX = 8
+
+(dribble)
